@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { FaBlog, FaMoon, FaSun } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { IHeaderProps } from '../../interfaces/headerProps';
@@ -11,9 +12,11 @@ function Header({ toggleTheme }: IHeaderProps) {
 
   return (
     <HeaderPage>
-      <Title>
-        <FaBlog size={30} /> Echo Blog
-      </Title>
+      <Link to="/">
+        <Title>
+          <FaBlog size={30} /> Echo Blog
+        </Title>
+      </Link>
 
       <Navbar />
       <Switch

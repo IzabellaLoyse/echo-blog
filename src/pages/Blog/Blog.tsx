@@ -1,11 +1,18 @@
 // import { Container } from './style';
 
+import PostItem from '../../components/PostItem/PostItem';
 import Layout from '../../layout/Layout';
 
 function Blog() {
   return (
     <Layout>
-      <h1>Blog</h1>
+      <section>
+        <h2>As principais noticias </h2>
+
+        <div>
+          <PostItem />
+        </div>
+      </section>
     </Layout>
   );
 }
