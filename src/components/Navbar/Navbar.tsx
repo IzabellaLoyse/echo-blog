@@ -1,17 +1,17 @@
-// import { Container } from './style';
 import { Link } from 'react-router-dom';
+import { Menu, MenuItem } from './style';
 
 function Navbar() {
   return (
     <nav>
-      <ul>
-        <li>
+      <Menu>
+        <MenuItem>
           <Link to="/">Home</Link>
-        </li>
-        <li>
+        </MenuItem>
+        <MenuItem>
           <Link to="/blog">Blog</Link>
-        </li>
-      </ul>
+        </MenuItem>
+      </Menu>
     </nav>
   );
 }

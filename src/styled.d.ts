@@ -6,7 +6,9 @@ declare module 'styled-components' {
 
     colors: {
       backgroundColor: string;
+      checkedColor: string;
       primaryColor: string;
+      secondaryColor: string;
     };
   }
 }

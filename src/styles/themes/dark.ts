@@ -2,7 +2,9 @@ export default {
   title: 'dark',
 
   colors: {
-    backgroundColor: '#000',
-    primaryColor: '#16A34A',
+    backgroundColor: '#18181B',
+    checkedColor: '#FDE047',
+    primaryColor: '#3D82EA',
+    secondaryColor: '#D1D5DB',
   },
 };

@@ -3,6 +3,8 @@ export default {
 
   colors: {
     backgroundColor: '#f5f5f5',
-    primaryColor: '#16A34A',
+    checkedColor: '#18181B',
+    primaryColor: '#2161C3',
+    secondaryColor: '#1C1917',
   },
 };

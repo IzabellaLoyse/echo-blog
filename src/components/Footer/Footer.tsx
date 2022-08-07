@@ -1,16 +1,16 @@
-// import { Container } from './style';
+import { Description, FooterPage } from './style';
 
 function Footer() {
   return (
-    <footer>
-      <p>
+    <FooterPage>
+      <Description>
         Echo Blog &copy; 2022 |{' '}
         <span>
           Desenvolvido por{' '}
           <a href="https://github.com/IzabellaLoyse">Izabella Loyse</a>
         </span>
-      </p>
-    </footer>
+      </Description>
+    </FooterPage>
   );
 }
 
