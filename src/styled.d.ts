@@ -9,6 +9,7 @@ declare module 'styled-components' {
       checkedColor: string;
       primaryColor: string;
       secondaryColor: string;
+      tertiaryColor: string;
     };
   }
 }

@@ -2,9 +2,9 @@
 
 function PostItem() {
   return (
-    <div>
+    <article>
       <h1>Hello</h1>
-    </div>
+    </article>
   );
 }
 

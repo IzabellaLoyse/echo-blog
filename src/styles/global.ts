@@ -16,11 +16,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
-  h1,
+  h1 {
+   color: ${(props) => props.theme.colors.primaryColor};
+  }
+
   h2,
   h3,
   h4 {
-    color: ${(props) => props.theme.colors.primaryColor};
+    color: ${(props) => props.theme.colors.tertiaryColor};
   }
 
   p,
@@ -50,6 +53,5 @@ const GlobalStyle = createGlobalStyle`
   img[width][height] {
     height: auto;
   }
-
 `;
 export default GlobalStyle;

@@ -6,5 +6,6 @@ export default {
     checkedColor: '#18181B',
     primaryColor: '#2161C3',
     secondaryColor: '#1C1917',
+    tertiaryColor: '#0a0807',
   },
 };

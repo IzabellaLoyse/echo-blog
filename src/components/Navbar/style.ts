@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
+export const NavBar = styled.nav`
+  margin-left: 50%;
+
+  @media (max-width: 62.5rem) {
+    margin-left: 1rem;
+  }
+`;
+
 export const Menu = styled.ul`
   display: flex;
-  gap: 2rem;
-  margin-left: 70rem;
+  gap: 4rem;
 `;
 
 export const MenuItem = styled.li`

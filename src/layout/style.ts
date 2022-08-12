@@ -6,3 +6,7 @@ export const Container = styled.section`
   margin: 0 auto;
   max-width: 90%;
 `;
+
+export const Main = styled.main`
+  margin-top: 2rem;
+`;

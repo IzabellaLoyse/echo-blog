@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Menu, MenuItem } from './style';
+import { Menu, MenuItem, NavBar } from './style';
 
 function Navbar() {
   return (
-    <nav>
+    <NavBar>
       <Menu>
         <MenuItem>
           <Link to="/">Home</Link>
@@ -12,7 +12,7 @@ function Navbar() {
           <Link to="/blog">Blog</Link>
         </MenuItem>
       </Menu>
-    </nav>
+    </NavBar>
   );
 }
 

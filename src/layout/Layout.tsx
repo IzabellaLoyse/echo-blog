@@ -6,7 +6,7 @@ import { ILayoutProps } from '../interfaces/layoutProps';
 import GlobalStyle from '../styles/global';
 import dark from '../styles/themes/dark';
 import light from '../styles/themes/light';
-import { Container } from './style';
+import { Container, Main } from './style';
 
 function Layout({ children }: ILayoutProps) {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -22,7 +22,7 @@ function Layout({ children }: ILayoutProps) {
       <Container>
         <Header toggleTheme={handleToggleTheme} />
 
-        <main>{children}</main>
+        <Main>{children}</Main>
 
         <Footer />
       </Container>

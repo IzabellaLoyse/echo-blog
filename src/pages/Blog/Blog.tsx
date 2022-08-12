@@ -1,4 +1,4 @@
-// import { Container } from './style';
+import { PostsContainer, SubTitle } from './style';
 
 import PostItem from '../../components/PostItem/PostItem';
 import Layout from '../../layout/Layout';
@@ -7,11 +7,11 @@ function Blog() {
   return (
     <Layout>
       <section>
-        <h2>As principais noticias </h2>
+        <SubTitle>As principais notícias do dia </SubTitle>
 
-        <div>
+        <PostsContainer>
           <PostItem />
-        </div>
+        </PostsContainer>
       </section>
     </Layout>
   );

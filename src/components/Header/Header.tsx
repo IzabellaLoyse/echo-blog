@@ -29,7 +29,7 @@ function Header({ toggleTheme }: IHeaderProps) {
         handleDiameter={25}
         onColor={colors.checkedColor}
         offColor={colors.checkedColor}
-        checkedHandleIcon={<FaSun color="#F59E0B" size={21} />}
+        checkedHandleIcon={<FaSun color="#F59E0B" size={22} />}
         uncheckedHandleIcon={<FaMoon color="#1a150a" size={20} />}
       />
     </HeaderPage>
