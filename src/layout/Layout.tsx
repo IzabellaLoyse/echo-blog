@@ -1,4 +1,5 @@
 import { DefaultTheme, ThemeProvider } from 'styled-components';
+import ButtonTop from '../components/ButtonTop/ButtonTop';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import usePersistedState from '../hooks/usePersistedState';
@@ -22,7 +23,10 @@ function Layout({ children }: ILayoutProps) {
       <Container>
         <Header toggleTheme={handleToggleTheme} />
 
-        <Main>{children}</Main>
+        <Main>
+          {children}
+          <ButtonTop />
+        </Main>
 
         <Footer />
       </Container>
