@@ -14,3 +14,7 @@ export const Title = styled.h1`
   font-weight: 700;
   letter-spacing: 0.084em;
 `;
+
+export const TitleColor = styled.span`
+  color: ${(props) => props.theme.colors.tertiaryColor};
+`;

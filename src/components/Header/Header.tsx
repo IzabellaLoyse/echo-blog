@@ -5,7 +5,7 @@ import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { IHeaderProps } from '../../interfaces/headerProps';
 import Navbar from '../Navbar/Navbar';
-import { HeaderPage, Title } from './style';
+import { HeaderPage, Title, TitleColor } from './style';
 
 function Header({ toggleTheme }: IHeaderProps) {
   const { colors, title } = useContext(ThemeContext);
@@ -14,7 +14,8 @@ function Header({ toggleTheme }: IHeaderProps) {
     <HeaderPage>
       <Link to="/">
         <Title>
-          <FaBlog size={30} /> Echo Blog
+          <FaBlog size={30} /> Echo {''}
+          <TitleColor>Blog</TitleColor>
         </Title>
       </Link>
 
