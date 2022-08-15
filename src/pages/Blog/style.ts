@@ -35,7 +35,7 @@ export const Border = styled.span`
 
 export const PostsContainer = styled.div`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding-top: 5rem;
   padding-bottom: 5rem;

@@ -1,34 +1,51 @@
-// import { Container } from './style';
+import {
+  Container,
+  PostContent,
+  PostData,
+  PostDate,
+  PostDescription,
+  PostImage,
+  PostTitle,
+  TagAuthor,
+} from './style';
 
 import { Link } from 'react-router-dom';
 import { IPostItem } from '../../interfaces/postItem';
 
 function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
-  const conversorDate = (date: any) => {
-    const newDate = new Date(date).toDateString();
+  
+  const formatterDate = (date: any) => {
+    const day = new Date(date).getDate();
+    const year = new Date(date).getFullYear();
+    const month = new Date(date).toLocaleString('pt-BR', { month: 'long' });
 
+    const monthUpperCase = month.charAt(0).toUpperCase() + month.slice(1);
+
+    const newDate = `${monthUpperCase} ${day}, ${year}`;
     return newDate;
   };
 
   return (
-    <article>
-      <div>
+    <Container>
+      <PostImage>
         <img src={image} alt="Imagem da notícia" />
-      </div>
+      </PostImage>
 
-      <div>
-        <div>
-          <p>
+      <PostContent>
+        <PostData>
+          <PostDate>
             <>
-              {conversorDate(createdAt)} | <span>{name}</span>
+              {formatterDate(createdAt)} | <TagAuthor>{name}</TagAuthor>
             </>
-          </p>
-        </div>
-        <h3>{title}</h3>
-        <p>{post}</p>
+          </PostDate>
+        </PostData>
+
+        <PostTitle>{title}</PostTitle>
+        <PostDescription>{post}</PostDescription>
+
         <Link to={`/post/${id}`}>Leia Mais</Link>
-      </div>
-    </article>
+      </PostContent>
+    </Container>
   );
 }
 
