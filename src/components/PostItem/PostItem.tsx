@@ -13,15 +13,15 @@ import { Link } from 'react-router-dom';
 import { IPostItem } from '../../interfaces/postItem';
 
 function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
-  
   const formatterDate = (date: any) => {
     const day = new Date(date).getDate();
     const year = new Date(date).getFullYear();
     const month = new Date(date).toLocaleString('pt-BR', { month: 'long' });
+    const hours = new Date(date).getHours();
 
     const monthUpperCase = month.charAt(0).toUpperCase() + month.slice(1);
 
-    const newDate = `${monthUpperCase} ${day}, ${year}`;
+    const newDate = `${monthUpperCase} ${day}, ${year} •  há ${hours} horas`;
     return newDate;
   };
 
@@ -34,10 +34,9 @@ function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
       <PostContent>
         <PostData>
           <PostDate>
-            <>
-              {formatterDate(createdAt)} | <TagAuthor>{name}</TagAuthor>
-            </>
+            <>{formatterDate(createdAt)} </>
           </PostDate>
+          <TagAuthor>{name}</TagAuthor>
         </PostData>
 
         <PostTitle>{title}</PostTitle>

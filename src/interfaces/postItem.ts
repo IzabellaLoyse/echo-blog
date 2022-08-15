@@ -6,4 +6,5 @@ export interface IPostItem {
   comments?: number;
   id: string;
   title?: string;
+  category?: string;
 }
