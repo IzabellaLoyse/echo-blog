@@ -4,7 +4,7 @@ function Footer() {
   return (
     <FooterPage>
       <Description>
-        Echo Blog &copy; 2022 |{' '}
+        Echo Blog &copy; 2022 - 2023 |{' '}
         <span>
           Desenvolvido por{' '}
           <a href="https://github.com/IzabellaLoyse">Izabella Loyse</a>

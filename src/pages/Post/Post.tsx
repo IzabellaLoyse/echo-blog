@@ -2,7 +2,9 @@
 
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
-import PostItem from '../../components/PostItem/PostItem';
+import PostList from '../../components/PostList/PostList';
+import { formatterDate } from '../../functions/formatterDate';
+import { PostReadTime } from '../../functions/readTime';
 import useFetch from '../../hooks/useFetch';
 import { IPostItem } from '../../interfaces/postItem';
 import Layout from '../../layout/Layout';
@@ -11,16 +13,6 @@ function Post() {
   const { id } = useParams();
 
   const { data: post, isLoading } = useFetch<IPostItem>(`posts/${id}`);
-  const { data: posts } = useFetch<IPostItem[]>(`posts`);
-
-  const formatterDate = (date: any) => {
-    const dateString = new Date(date).toLocaleDateString();
-    const hours = new Date(date).getHours();
-    const minutes = new Date(date).getMinutes();
-
-    const newDate = `${dateString} às ${hours}:${minutes}`;
-    return newDate;
-  };
 
   return (
     <Layout>
@@ -29,7 +21,7 @@ function Post() {
         <h2>{post?.title}</h2>
         <p>
           <span>{formatterDate(post?.createdAt)}</span>
-          {''} • 4 min de leitura
+          {''} • {`${PostReadTime(post?.post)}min de leitura`}
         </p>
 
         <img src={post?.image} alt="" />
@@ -46,17 +38,8 @@ function Post() {
 
       <section>
         <h4>Veja também</h4>
-        {posts?.map((item) => (
-          <PostItem
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            image={item.image}
-            name={item.name}
-            post={item.post}
-            createdAt={item.createdAt}
-          />
-        ))}
+
+        <PostList />
       </section>
     </Layout>
   );
