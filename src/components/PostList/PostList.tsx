@@ -5,7 +5,7 @@ import { IPostItem } from '../../interfaces/postItem';
 import PostItem from '../PostItem/PostItem';
 
 function PostList() {
-  const { data: posts } = useFetch<IPostItem[]>(`posts?page=1&limit=10`);
+  const { data: posts } = useFetch<IPostItem[]>(`posts?page=1&limit=5`);
   return (
     <div>
       {posts?.map((item) => (

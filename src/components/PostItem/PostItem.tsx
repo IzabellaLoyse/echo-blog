@@ -9,7 +9,6 @@ import {
   TagAuthor,
 } from './style';
 
-import { Link } from 'react-router-dom';
 import { formatterDateWithHours } from '../../functions/formatterDate';
 import { IPostItem } from '../../interfaces/postItem';
 
@@ -31,7 +30,7 @@ function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
         <PostTitle>{title}</PostTitle>
         <PostDescription>{post}</PostDescription>
 
-        <Link to={`/post/${id}`}>Leia Mais</Link>
+        <a href={`/post/${id}`}>Leia Mais</a>
       </PostContent>
     </Container>
   );

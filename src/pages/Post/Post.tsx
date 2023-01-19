@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
 import PostList from '../../components/PostList/PostList';
 import { formatterDate } from '../../functions/formatterDate';
-import { PostReadTime } from '../../functions/readTime';
+import { postReadTime } from '../../functions/readTime';
 import useFetch from '../../hooks/useFetch';
 import { IPostItem } from '../../interfaces/postItem';
 import Layout from '../../layout/Layout';
@@ -21,7 +21,7 @@ function Post() {
         <h2>{post?.title}</h2>
         <p>
           <span>{formatterDate(post?.createdAt)}</span>
-          {''} • {`${PostReadTime(post?.post)}min de leitura`}
+          {postReadTime(post?.post)}
         </p>
 
         <img src={post?.image} alt="" />

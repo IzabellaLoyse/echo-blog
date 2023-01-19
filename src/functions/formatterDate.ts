@@ -1,4 +1,6 @@
 export const formatterDate = (date: any) => {
+  if (!date) return null;
+
   const dateString = new Date(date).toLocaleDateString();
   const hours = new Date(date).getHours();
   const minutes = new Date(date).getMinutes();
@@ -8,6 +10,8 @@ export const formatterDate = (date: any) => {
 };
 
 export const formatterDateWithHours = (date: any) => {
+  if (!date) return null;
+
   const day = new Date(date).getDate();
   const year = new Date(date).getFullYear();
   const month = new Date(date).toLocaleString('pt-BR', { month: 'long' });
