@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { variablesGlobal } from '../../styles/variables';
 
 export const SubTitle = styled.h2`
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: ${variablesGlobal.fontWeight.bold};
   text-align: center;
 `;
 
@@ -15,7 +16,7 @@ export const DescriptionContainer = styled.div`
 
 export const Description = styled.p`
   text-align: center;
-  font-weight: 500;
+  font-weight: ${variablesGlobal.fontWeight.medium};
   font-size: 1.2rem;
   max-width: 600px;
 `;

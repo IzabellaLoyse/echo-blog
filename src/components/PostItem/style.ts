@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { variablesGlobal } from '../../styles/variables';
 
 export const Container = styled.article`
   display: flex;
@@ -27,19 +28,6 @@ export const PostContent = styled.div`
   flex: 1;
   justify-content: space-around;
   padding: 1rem;
-
-  a {
-    color: ${(props) => props.theme.colors.tertiaryColor};
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 1rem;
-    text-align: left;
-    transition: 200ms ease-in-out;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 `;
 
 export const PostData = styled.div`
@@ -48,7 +36,7 @@ export const PostData = styled.div`
 
 export const PostDate = styled.p`
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: ${variablesGlobal.fontWeight.bold};
 `;
 
 export const TagAuthor = styled.span`
@@ -66,7 +54,26 @@ export const PostDescription = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   display: -webkit-box;
-  font-weight: 400;
+  font-weight: ${variablesGlobal.fontWeight.regular};
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const ButtonReadMore = styled.a`
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.colors.colorLink};
+  font-size: 1rem;
+  font-weight: ${variablesGlobal.fontWeight.bold};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

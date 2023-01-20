@@ -1,4 +1,5 @@
 import {
+  ButtonReadMore,
   Container,
   PostContent,
   PostData,
@@ -9,10 +10,13 @@ import {
   TagAuthor,
 } from './style';
 
+import { useTranslation } from 'react-i18next';
 import { formatterDateWithHours } from '../../functions/formatterDate';
 import { IPostItem } from '../../interfaces/postItem';
 
 function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <PostImage>
@@ -30,7 +34,9 @@ function PostItem({ id, name, image, createdAt, post, title }: IPostItem) {
         <PostTitle>{title}</PostTitle>
         <PostDescription>{post}</PostDescription>
 
-        <a href={`/post/${id}`}>Leia Mais</a>
+        <ButtonReadMore href={`/post/${id}`}>
+          {t('Post.Item.ReadMore')}
+        </ButtonReadMore>
       </PostContent>
     </Container>
   );

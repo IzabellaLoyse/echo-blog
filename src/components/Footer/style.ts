@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { variablesGlobal } from '../../styles/variables';
 
 export const FooterPage = styled.footer`
   padding-bottom: 2rem;
@@ -6,12 +7,12 @@ export const FooterPage = styled.footer`
 `;
 
 export const Description = styled.p`
-  font-weight: 400;
+  font-weight: ${variablesGlobal.fontWeight.regular};
   letter-spacing: 0.084em;
   text-align: center;
 
   a {
     color: ${(props) => props.theme.colors.primaryColor};
-    font-weight: 700;
+    font-weight: ${variablesGlobal.fontWeight.bold};
   }
 `;

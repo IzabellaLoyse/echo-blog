@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { variablesGlobal } from '../../styles/variables';
 
 export const NavBar = styled.nav`
   margin-left: 50%;
@@ -17,7 +18,7 @@ export const MenuItem = styled.li`
   a {
     color: ${(props) => props.theme.colors.secondaryColor};
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: ${variablesGlobal.fontWeight.medium};
     letter-spacing: 0.021em;
     text-decoration: none;
     transition: 0.5s ease-in-out;

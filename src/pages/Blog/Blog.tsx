@@ -6,6 +6,7 @@ import {
   SubTitle,
 } from './style';
 
+import { useTranslation } from 'react-i18next';
 import Loading from '../../components/Loading/Loading';
 import PostItem from '../../components/PostItem/PostItem';
 import useFetch from '../../hooks/useFetch';
@@ -13,17 +14,17 @@ import { IPostItem } from '../../interfaces/postItem';
 import Layout from '../../layout/Layout';
 
 function Blog() {
+  const { t } = useTranslation();
   const { data: post, isLoading } = useFetch<IPostItem[]>(`posts`);
 
   return (
     <Layout>
       <section>
-        <SubTitle>As principais notícias do dia </SubTitle>
+        <SubTitle>{t('Blog.Title.TopNewsTheDay')}</SubTitle>
 
         <DescriptionContainer>
           <Description>
-            Leia no momento em que está acontecendo a notícia. As principais
-            notícias que estão rodando o mundo você encontra por aqui.
+            {t('Blog.Description.ReadNews')}
             <Border></Border>
           </Description>
         </DescriptionContainer>

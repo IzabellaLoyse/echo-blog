@@ -7,5 +7,6 @@ export default {
     primaryColor: '#3D82EA',
     secondaryColor: '#D1D5DB',
     tertiaryColor: '#ecedee',
+    colorLink: '#0e0b09',
   },
 };

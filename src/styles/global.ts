@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

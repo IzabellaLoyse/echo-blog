@@ -1,6 +1,12 @@
 {
   "translation": {
+    "Menu.Item.Home": "Home",
+    "Menu.Item.Blog": "Blog",
     "Menu.Language.Portuguese": "Portuguese",
-    "Menu.Language.English": "English"
+    "Menu.Language.English": "English",
+    "Blog.Title.TopNewsTheDay": "Top news of the day",
+    "Blog.Description.ReadNews": "Read when the news is happening. The main news that are going around the world you can find here.",
+    "Post.Item.ReadMore": "Read more",
+    "Footer.Description.DevelopedBy": "Developed By"
   }
 }

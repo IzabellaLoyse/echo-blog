@@ -1,6 +1,12 @@
 {
   "translation": {
+    "Menu.Item.Home": "Início",
+    "Menu.Item.Blog": "Blog",
     "Menu.Language.Portuguese": "Português",
-    "Menu.Language.English": "Inglês"
+    "Menu.Language.English": "Inglês",
+    "Blog.Title.TopNewsTheDay": "As principais notícias do dia",
+    "Blog.Description.ReadNews": "Leia no momento em que está acontecendo a notícia. As principais notícias que estão rodando o mundo você encontra por aqui.",
+    "Post.Item.ReadMore": "Leia mais",
+    "Footer.Description.DevelopedBy": "Desenvolvido por"
   }
 }

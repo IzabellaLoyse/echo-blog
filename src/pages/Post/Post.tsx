@@ -1,4 +1,4 @@
-// import { Container } from './style';
+import { HeaderPost } from './style';
 
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
@@ -17,30 +17,39 @@ function Post() {
   return (
     <Layout>
       {isLoading && <Loading />}
-      <article>
-        <h2>{post?.title}</h2>
-        <p>
-          <span>{formatterDate(post?.createdAt)}</span>
-          {postReadTime(post?.post)}
-        </p>
 
-        <img src={post?.image} alt="" />
+      {post && (
+        <>
+          <article>
+            <HeaderPost>
+              <h2>{post?.title}</h2>
+              <p>
+                <span>{formatterDate(post?.createdAt)}</span>
+                {postReadTime(post?.post)}
+              </p>
+            </HeaderPost>
 
-        <p>Por: {post?.name}</p>
+            <div>
+              <img src={post?.image} alt={post?.name} />
 
-        <p>{post?.post}</p>
+              <p>Por: {post?.name}</p>
 
-        <div>
-          <h4>Categorias</h4>
-          {post?.category}
-        </div>
-      </article>
+              <p>{post?.post}</p>
+            </div>
 
-      <section>
-        <h4>Veja também</h4>
+            <div>
+              <h4>Categorias</h4>
+              {post?.category}
+            </div>
+          </article>
 
-        <PostList />
-      </section>
+          <section>
+            <h4>Veja também</h4>
+
+            <PostList />
+          </section>
+        </>
+      )}
     </Layout>
   );
 }

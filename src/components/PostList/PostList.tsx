@@ -2,12 +2,14 @@
 
 import useFetch from '../../hooks/useFetch';
 import { IPostItem } from '../../interfaces/postItem';
+import { PostsContainer } from '../../pages/Blog/style';
 import PostItem from '../PostItem/PostItem';
 
 function PostList() {
-  const { data: posts } = useFetch<IPostItem[]>(`posts?page=1&limit=5`);
+  const { data: posts } = useFetch<IPostItem[]>(`posts?page=1&limit=3`);
+
   return (
-    <div>
+    <PostsContainer>
       {posts?.map((item) => (
         <PostItem
           key={item.id}
@@ -19,7 +21,7 @@ function PostList() {
           createdAt={item.createdAt}
         />
       ))}
-    </div>
+    </PostsContainer>
   );
 }
 
