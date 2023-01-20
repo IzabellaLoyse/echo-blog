@@ -19,38 +19,40 @@ function Post() {
     <Layout>
       {isLoading && <Loading />}
 
-      <>
-        <article>
-          <HeaderPost>
-            <h2>{post?.title}</h2>
+      {post && (
+        <>
+          <article>
+            <HeaderPost>
+              <h2>{post?.title}</h2>
 
-            <ContentHeader>
-              <PostTagAuthor> {post?.name}</PostTagAuthor>
-              <PostDate>
-                <span>{formatterDate(post?.createdAt)}</span>
-                {postReadTime(post?.post)}
-              </PostDate>
-            </ContentHeader>
-          </HeaderPost>
+              <ContentHeader>
+                <PostTagAuthor> {post?.name}</PostTagAuthor>
+                <PostDate>
+                  <span>{formatterDate(post?.createdAt)}</span>
+                  {postReadTime(post?.post)}
+                </PostDate>
+              </ContentHeader>
+            </HeaderPost>
 
-          <div>
-            <img src={post?.image} alt={post?.name} />
+            <div>
+              <img src={post?.image} alt={post?.name} />
 
-            <p>{post?.post}</p>
-          </div>
+              <p>{post?.post}</p>
+            </div>
 
-          <div>
-            <h4>Categorias</h4>
-            {post?.category}
-          </div>
-        </article>
+            <div>
+              <h4>Categorias</h4>
+              {post?.category}
+            </div>
+          </article>
 
-        <section>
-          <h4>Veja também</h4>
+          <section>
+            <h4>Veja também</h4>
 
-          <PostList />
-        </section>
-      </>
+            <PostList />
+          </section>
+        </>
+      )}
     </Layout>
   );
 }
