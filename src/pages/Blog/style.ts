@@ -10,6 +10,7 @@ export const SubTitle = styled.h2`
 export const DescriptionContainer = styled.div`
   padding-top: 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
@@ -31,7 +32,8 @@ export const Border = styled.span`
   display: inline-block;
   height: 4%;
   padding: 0.2rem;
-  width: 15%;
+  width: 12%;
+  margin-top: 0.8rem;
 `;
 
 export const PostsContainer = styled.div`

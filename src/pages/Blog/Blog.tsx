@@ -23,10 +23,8 @@ function Blog() {
         <SubTitle>{t('Blog.Title.TopNewsTheDay')}</SubTitle>
 
         <DescriptionContainer>
-          <Description>
-            {t('Blog.Description.ReadNews')}
-            <Border></Border>
-          </Description>
+          <Description>{t('Blog.Description.ReadNews')}</Description>
+          <Border></Border>
         </DescriptionContainer>
 
         <PostsContainer>
