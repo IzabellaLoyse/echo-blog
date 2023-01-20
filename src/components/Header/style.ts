@@ -6,7 +6,8 @@ export const HeaderPage = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 export const Title = styled.h1`

@@ -1,7 +1,8 @@
-import { HeaderPost } from './style';
+import { ContentHeader, HeaderPost, PostTagAuthor } from './style';
 
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
+import { PostDate } from '../../components/PostItem/style';
 import PostList from '../../components/PostList/PostList';
 import { formatterDate } from '../../functions/formatterDate';
 import { postReadTime } from '../../functions/readTime';
@@ -18,38 +19,38 @@ function Post() {
     <Layout>
       {isLoading && <Loading />}
 
-      {post && (
-        <>
-          <article>
-            <HeaderPost>
-              <h2>{post?.title}</h2>
-              <p>
+      <>
+        <article>
+          <HeaderPost>
+            <h2>{post?.title}</h2>
+
+            <ContentHeader>
+              <PostTagAuthor> {post?.name}</PostTagAuthor>
+              <PostDate>
                 <span>{formatterDate(post?.createdAt)}</span>
                 {postReadTime(post?.post)}
-              </p>
-            </HeaderPost>
+              </PostDate>
+            </ContentHeader>
+          </HeaderPost>
 
-            <div>
-              <img src={post?.image} alt={post?.name} />
+          <div>
+            <img src={post?.image} alt={post?.name} />
 
-              <p>Por: {post?.name}</p>
+            <p>{post?.post}</p>
+          </div>
 
-              <p>{post?.post}</p>
-            </div>
+          <div>
+            <h4>Categorias</h4>
+            {post?.category}
+          </div>
+        </article>
 
-            <div>
-              <h4>Categorias</h4>
-              {post?.category}
-            </div>
-          </article>
+        <section>
+          <h4>Veja também</h4>
 
-          <section>
-            <h4>Veja também</h4>
-
-            <PostList />
-          </section>
-        </>
-      )}
+          <PostList />
+        </section>
+      </>
     </Layout>
   );
 }
