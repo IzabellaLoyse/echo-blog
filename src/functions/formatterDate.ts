@@ -9,7 +9,7 @@ export const formatterDate = (date: any) => {
   return newDate;
 };
 
-export const formatterDateWithHours = (date: any, hasFullHours: boolean) => {
+export const formatterDateWithHours = (date: any, hasFullHours = false) => {
   if (!date) return null;
 
   const day = new Date(date).getDate();
