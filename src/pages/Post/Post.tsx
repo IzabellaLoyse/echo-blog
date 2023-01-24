@@ -1,14 +1,26 @@
-import { ContentHeader, HeaderPost, PostTagAuthor } from './style';
+import {
+  ContentHeader,
+  HeaderPost,
+  PostDescription,
+  PostHeaderTitle,
+  PostTagAuthor,
+  TitleCategories,
+  TitleSeeToo,
+  Wrapper,
+  WrapperCategories,
+  WrapperSeeToo,
+} from './style';
 
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
 import { PostDate } from '../../components/PostItem/style';
 import PostList from '../../components/PostList/PostList';
-import { formatterDate } from '../../functions/formatterDate';
+import { formatterDateWithHours } from '../../functions/formatterDate';
 import { postReadTime } from '../../functions/readTime';
 import useFetch from '../../hooks/useFetch';
 import { IPostItem } from '../../interfaces/postItem';
 import Layout from '../../layout/Layout';
+import { Border } from '../Blog/style';
 
 function Post() {
   const { id } = useParams();
@@ -23,31 +35,33 @@ function Post() {
         <>
           <article>
             <HeaderPost>
-              <h2>{post?.title}</h2>
+              <PostHeaderTitle>{post?.title}</PostHeaderTitle>
 
               <ContentHeader>
                 <PostTagAuthor> {post?.name}</PostTagAuthor>
                 <PostDate>
-                  <span>{formatterDate(post?.createdAt)}</span>
+                  <span>{formatterDateWithHours(post?.createdAt, true)}</span>
                   {postReadTime(post?.post)}
                 </PostDate>
               </ContentHeader>
             </HeaderPost>
 
-            <div>
+            <Wrapper>
               <img src={post?.image} alt={post?.name} />
+              <PostDescription>{post?.post}</PostDescription>
+            </Wrapper>
 
-              <p>{post?.post}</p>
-            </div>
-
-            <div>
-              <h4>Categorias</h4>
-              {post?.category}
-            </div>
+            <WrapperCategories>
+              <TitleCategories>Categorias</TitleCategories>
+              <p> {post?.category}</p>
+            </WrapperCategories>
           </article>
 
           <section>
-            <h4>Veja também</h4>
+            <WrapperSeeToo>
+              <TitleSeeToo>Veja também</TitleSeeToo>
+              <Border></Border>
+            </WrapperSeeToo>
 
             <PostList />
           </section>

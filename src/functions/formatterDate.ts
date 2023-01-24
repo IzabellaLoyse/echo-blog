@@ -9,16 +9,21 @@ export const formatterDate = (date: any) => {
   return newDate;
 };
 
-export const formatterDateWithHours = (date: any) => {
+export const formatterDateWithHours = (date: any, hasFullHours: boolean) => {
   if (!date) return null;
 
   const day = new Date(date).getDate();
   const year = new Date(date).getFullYear();
   const month = new Date(date).toLocaleString('pt-BR', { month: 'long' });
   const hours = new Date(date).getHours();
+  const minutes = new Date(date).getMinutes();
 
   const monthUpperCase = month.charAt(0).toUpperCase() + month.slice(1);
+  let newDate;
 
-  const newDate = `${monthUpperCase} ${day}, ${year} •  há ${hours} horas`;
+  hasFullHours
+    ? (newDate = `${monthUpperCase} ${day}, ${year}  às ${hours}:${minutes}`)
+    : (newDate = `${monthUpperCase} ${day}, ${year} • há ${hours} horas`);
+
   return newDate;
 };
