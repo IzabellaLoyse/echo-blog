@@ -1,4 +1,10 @@
-import { TitleMain, WrapperTitle } from './style';
+import {
+  Description,
+  Subtitle,
+  TitleMain,
+  WrapperDescription,
+  WrapperTitle,
+} from './style';
 
 import Layout from '../../layout/Layout';
 import { Border } from '../Blog/style';
@@ -15,12 +21,35 @@ function Home() {
         <Border></Border>
       </WrapperTitle>
 
-      <div>
-        <p>
-          Acompanhe as principais noticias que estão acontecendo no mundo em um
-          so lugar
-        </p>
-      </div>
+      <WrapperDescription>
+        <Subtitle>{t('Home.Subtitle.FollowMainNews')}</Subtitle>
+        <img
+          src="/blogging.svg"
+          alt={t('Home.Alt.PeopleLookingWorking') as any}
+        />
+
+        <Description>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+          rem excepturi consequatur hic. Iste totam consectetur dolore, fugit
+          consequuntur minus eligendi tenetur, pariatur omnis ad corrupti,
+          reprehenderit voluptatem tempora ab.
+        </Description>
+      </WrapperDescription>
+
+      <WrapperDescription>
+        <Subtitle>{t('Home.Subtitle.OurPublicationsCreatedByTeam')}</Subtitle>
+        <img
+          src="/creator.svg"
+          alt={t('Home.Alt.WomanLookingScreens') as any}
+        />
+
+        <Description>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+          rem excepturi consequatur hic. Iste totam consectetur dolore, fugit
+          consequuntur minus eligendi tenetur, pariatur omnis ad corrupti,
+          reprehenderit voluptatem tempora ab.
+        </Description>
+      </WrapperDescription>
     </Layout>
   );
 }
