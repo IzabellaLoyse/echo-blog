@@ -11,7 +11,8 @@ export const NavBar = styled.nav`
 
 export const Menu = styled.ul`
   display: flex;
-  gap: 4rem;
+  flex-flow: row nowrap;
+  gap: 2rem;
 `;
 
 export const MenuItem = styled.li`
