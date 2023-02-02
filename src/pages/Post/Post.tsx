@@ -11,6 +11,7 @@ import {
   WrapperSeeToo,
 } from './style';
 
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
 import { PostDate } from '../../components/PostItem/style';
@@ -23,6 +24,7 @@ import Layout from '../../layout/Layout';
 import { Border } from '../Blog/style';
 
 function Post() {
+  const { t } = useTranslation();
   const { id } = useParams();
 
   const { data: post, isLoading } = useFetch<IPostItem>(`posts/${id}`);
@@ -52,14 +54,14 @@ function Post() {
             </Wrapper>
 
             <WrapperCategories>
-              <TitleCategories>Categorias</TitleCategories>
+              <TitleCategories> {t('Post.Item.Categories')}</TitleCategories>
               <p> {post?.category}</p>
             </WrapperCategories>
           </article>
 
           <section>
             <WrapperSeeToo>
-              <TitleSeeToo>Veja também</TitleSeeToo>
+              <TitleSeeToo> {t('Post.Item.SeeToo')}</TitleSeeToo>
               <Border></Border>
             </WrapperSeeToo>
 

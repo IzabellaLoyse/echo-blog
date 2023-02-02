@@ -1,16 +1,26 @@
-// import { Container } from './style';
+import { TitleMain, WrapperTitle } from './style';
 
 import Layout from '../../layout/Layout';
+import { Border } from '../Blog/style';
+
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <Layout>
-      <h1>Echo blog News</h1>
+      <WrapperTitle>
+        <TitleMain>{t('Home.Title.EchoBlogNews')}</TitleMain>
+        <Border></Border>
+      </WrapperTitle>
 
-      <p>
-        Acompanhe as principais noticias que estão acontecendo no mundo em um so
-        lugar
-      </p>
+      <div>
+        <p>
+          Acompanhe as principais noticias que estão acontecendo no mundo em um
+          so lugar
+        </p>
+      </div>
     </Layout>
   );
 }

@@ -4,9 +4,12 @@
     "Menu.Item.Blog": "Blog",
     "Menu.Language.Portuguese": "Português",
     "Menu.Language.English": "Inglês",
+    "Home.Title.EchoBlogNews": "Echo Blog Notícias",
     "Blog.Title.TopNewsTheDay": "As principais notícias do dia",
     "Blog.Description.ReadNews": "Leia no momento em que está acontecendo a notícia. As principais notícias que estão rodando o mundo você encontra por aqui.",
     "Post.Item.ReadMore": "Leia mais",
+    "Post.Item.SeeToo": "Veja também",
+    "Post.Item.Categories": "Categorias",
     "Footer.Description.DevelopedBy": "Desenvolvido por"
   }
 }
