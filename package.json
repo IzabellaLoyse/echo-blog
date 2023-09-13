@@ -34,7 +34,7 @@
     "prettier": "^2.8.8",
     "react-icons": "^4.9.0",
     "react-switch": "^7.0.0",
-    "styled-components": "^5.3.11",
+    "styled-components": "^6.0.8",
     "typescript": "^5.2.2",
     "vite": "^4.3.9"
   }
